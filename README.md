@@ -1,1 +1,2 @@
-# bird-paradis
+## 有朋自远方来-候鸟天堂
++ 食用方法：通过checkOut分支看实现
