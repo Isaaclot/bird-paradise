@@ -1,5 +1,7 @@
 package task3;
 
+import task3.util.FormatPrinter;
+
 /**
  * 【接口分离原则:客户端不应该被强制依赖它们本不需要使用的接口和方法】
  * 【里氏替换原则:继承必须保证超类的所有非私有属性/行为，在子类中都合理】
@@ -22,21 +24,17 @@ public class Bird {
 
     public String eating(String clock) {
         String action = "eating";
-        return reportStatus(clock, action);
+        return FormatPrinter.reportStatus(clock, getBirdName(), action);
     }
 
     public String walking(String clock) {
         String action = "walking";
-        return reportStatus(clock, action);
+        return FormatPrinter.reportStatus(clock, getBirdName(), action);
     }
 
     public String performing(String clock) {
         String action = "performing";
-        return reportStatus(clock, action);
-    }
-
-    public String reportStatus(String clock, String action) {
-        return String.format("It's %s, I'm %s, I'm %s", clock, getBirdName(), action);
+        return FormatPrinter.reportStatus(clock, getBirdName(), action);
     }
 
     String getBirdName() {

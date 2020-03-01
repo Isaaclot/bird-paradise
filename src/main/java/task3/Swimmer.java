@@ -1,16 +1,20 @@
 package task3;
 
+import task3.util.FormatPrinter;
+
 /**
  * @author
  * @since 2020/3/1 11:59 AM
  */
-public class Swimmer extends Bird implements ISwim {
+public class Swimmer implements ISwim {
+    private String birdName;
+
     public Swimmer(String birdName) {
-        super(birdName);
+        this.birdName = birdName;
     }
 
     @Override
     public String swimming(String clock) {
-        return reportStatus(clock, "swimming");
+        return FormatPrinter.reportStatus(clock, birdName, "swimming");
     }
 }

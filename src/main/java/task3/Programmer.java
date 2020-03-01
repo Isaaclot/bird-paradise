@@ -1,22 +1,21 @@
 package task3;
 
+import task3.util.FormatPrinter;
+
 /**
  * @author
  * @since 2020/3/1 5:37 PM
  */
-public class Programmer extends Bird implements IProgram {
+public class Programmer implements IProgram {
+
+    private String birdName;
 
     public Programmer(String birdName) {
-        super(birdName);
-    }
-
-    @Override
-    String getBirdName() {
-        return super.getBirdName();
+        this.birdName = birdName;
     }
 
     @Override
     public String programming(String clock) {
-        return reportStatus(clock, "programming");
+        return FormatPrinter.reportStatus(clock,birdName , "programming");
     }
 }
