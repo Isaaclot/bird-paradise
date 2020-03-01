@@ -6,10 +6,12 @@ package task3;
  */
 public class WildGoose extends Bird implements IFly, ISwim {
 
-    public WildGoose(String birdName) {
-        super(birdName);
-        this.flier = new Flier(birdName);
-        this.swimmer = new Swimmer(birdName);
+    public static final String WILD_GOOSE = "WildGoose";
+
+    public WildGoose() {
+        super(WILD_GOOSE);
+        this.flier = new Flier(WILD_GOOSE);
+        this.swimmer = new Swimmer(WILD_GOOSE);
     }
 
     Flier flier;
@@ -17,7 +19,7 @@ public class WildGoose extends Bird implements IFly, ISwim {
 
 
     String getBirdName() {
-        return "WildGoose";
+        return WILD_GOOSE;
     }
 
     public String flying(String clock) {

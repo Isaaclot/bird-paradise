@@ -6,13 +6,14 @@ package task3;
  */
 public class Penguin extends Bird implements ISwim {
 
+    public static final String PENGUIN = "Penguin";
     Flier flier;
     Swimmer swimmer;
 
-    public Penguin(String birdName) {
-        super(birdName);
-        flier = new Flier(birdName);
-        swimmer = new Swimmer(birdName);
+    public Penguin() {
+        super(PENGUIN);
+        flier = new Flier(PENGUIN);
+        swimmer = new Swimmer(PENGUIN);
     }
 
 

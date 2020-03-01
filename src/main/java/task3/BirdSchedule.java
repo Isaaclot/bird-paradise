@@ -15,7 +15,7 @@ public class BirdSchedule {
     }
 
     private List<Bird> initBirdList() {
-        return Arrays.asList(new WildGoose("WildGoose"), new Swallow("Swallow"), new Penguin("Penguin"));
+        return Arrays.asList(new WildGoose(), new Swallow(), new Penguin());
     }
 
     public String eating(String clock) {

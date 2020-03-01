@@ -6,16 +6,17 @@ package task3;
  */
 public class Swallow extends Flier implements IFly {
 
+    public static final String SWALLOW = "Swallow";
     Flier flier;
 
-    public Swallow(String birdName) {
-        super(birdName);
-        this.flier = new Flier(getBirdName());
+    public Swallow() {
+        super(SWALLOW);
+        this.flier = new Flier(SWALLOW);
     }
 
     @Override
     String getBirdName() {
-        return "Swallow";
+        return SWALLOW;
     }
 
     @Override
