@@ -5,7 +5,5 @@ package task3;
  * @since 2020/3/1 12:14 PM
  */
 public interface IFly {
-    default String flying(String clock, String bird) {
-        return String.format("It's %s, I'm %s, I'm %s", clock, bird, "flying");
-    };
+    String flying(String clock);
 }

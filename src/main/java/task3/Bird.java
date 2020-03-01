@@ -4,7 +4,15 @@ package task3;
  * @author liangqian0723@gmail.com
  * @since 2020/3/1 10:03 AM
  */
-public abstract class Bird {
+public class Bird {
+    public String birdName;
+
+    public Bird() {
+    }
+
+    public Bird(String birdName) {
+        this.birdName = birdName;
+    }
 
     public String eating(String clock) {
         String action = "eating";
@@ -21,20 +29,12 @@ public abstract class Bird {
         return reportStatus(action, clock);
     }
 
-    public String flying(String clock) {
-        return reportStatus("flying", clock);
-    }
-
-    public String swimming(String clock) {
-        return reportStatus("swimming", clock);
-    }
-
     public String reportStatus(String action, String clock) {
         return String.format("It's %s, I'm %s, I'm %s", clock, getBirdName(), action);
     }
 
     String getBirdName() {
-        return "bird";
+        return birdName;
     }
 
 }

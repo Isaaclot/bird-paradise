@@ -15,7 +15,7 @@ public class BirdSchedule {
     }
 
     private List<Bird> initBirdList() {
-        return Arrays.asList(new WildGoose(), new Swallow(), new Penguin());
+        return Arrays.asList(new WildGoose("WildGoose"), new Swallow("Swallow"), new Penguin("Penguin"));
     }
 
     public String eating(String clock) {
@@ -46,7 +46,7 @@ public class BirdSchedule {
         StringBuilder printer = new StringBuilder();
         for (Bird bird : birdList) {
             if (bird instanceof IFly)
-                printer.append(bird.flying(clock)).append("\n");
+                printer.append(((IFly) bird).flying(clock)).append("\n");
         }
         return printer.toString();
     }
@@ -54,8 +54,8 @@ public class BirdSchedule {
     public String swimming(String clock) {
         StringBuilder printer = new StringBuilder();
         for (Bird bird : birdList) {
-            if (bird instanceof Swallow) continue;
-            printer.append(bird.swimming(clock)).append("\n");
+            if (bird instanceof ISwim)
+                printer.append(((ISwim) bird).swimming(clock)).append("\n");
         }
         return printer.toString();
     }
