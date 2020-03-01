@@ -1,4 +1,4 @@
-package BirdParadise;
+package task1;
 
 public class BirdSchedule {
     private String clock;
