@@ -1,10 +1,10 @@
 package task3;
 
 /**
- * @author liangqian0723@gmail.com
+ * @author
  * @since 2020/3/1 9:51 AM
  */
-public class WildGoose extends Bird implements IFly, ISwim {
+public class WildGoose extends Bird implements IFly, ISwim, IProgram {
 
     public static final String WILD_GOOSE = "WildGoose";
 
@@ -12,10 +12,13 @@ public class WildGoose extends Bird implements IFly, ISwim {
         super(WILD_GOOSE);
         this.flier = new Flier(WILD_GOOSE);
         this.swimmer = new Swimmer(WILD_GOOSE);
+        this.programmer = new Programmer(WILD_GOOSE);
+
     }
 
     Flier flier;
     Swimmer swimmer;
+    Programmer programmer;
 
 
     String getBirdName() {
@@ -30,5 +33,10 @@ public class WildGoose extends Bird implements IFly, ISwim {
     @Override
     public String swimming(String clock) {
         return swimmer.swimming(clock);
+    }
+
+    @Override
+    public String programming(String clock) {
+        return programmer.programming(clock);
     }
 }

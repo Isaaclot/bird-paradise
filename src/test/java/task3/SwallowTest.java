@@ -7,7 +7,7 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 /**
- * @author liangqian0723@gmail.com
+ * @author
  * @since 2020/3/1 10:10 AM
  */
 public class SwallowTest {

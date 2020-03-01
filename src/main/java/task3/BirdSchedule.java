@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author liangqian0723@gmail.com
+ * @author
  * @since 2020/3/1 10:23 AM
  */
 public class BirdSchedule {
@@ -56,6 +56,24 @@ public class BirdSchedule {
         for (Bird bird : birdList) {
             if (bird instanceof ISwim)
                 printer.append(((ISwim) bird).swimming(clock)).append("\n");
+        }
+        return printer.toString();
+    }
+
+    public String programming(String clock) {
+        StringBuilder printer = new StringBuilder();
+        for (Bird bird : birdList) {
+            if (bird instanceof IProgram)
+                printer.append(((IProgram) bird).programming(clock)).append("\n");
+        }
+        return printer.toString();
+    }
+
+    public String building(String clock) {
+        StringBuilder printer = new StringBuilder();
+        for (Bird bird : birdList) {
+            if (bird instanceof IBuildHouse)
+                printer.append(((IBuildHouse) bird).building(clock)).append("\n");
         }
         return printer.toString();
     }

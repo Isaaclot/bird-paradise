@@ -1,13 +1,12 @@
 package task3;
 
 import org.junit.Test;
-import task3.BirdSchedule;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 /**
- * @author liangqian0723@gmail.com
+ * @author
  * @since 2020/3/1 10:20 AM
  */
 public class BirdScheduleTest {
@@ -39,6 +38,13 @@ public class BirdScheduleTest {
     }
 
     @Test
+    public void test_14_schedule() {
+        BirdSchedule birdSchedule = new BirdSchedule();
+        String excepted = "It's 14:00, I'm Penguin, I'm building\n";
+        assertThat(birdSchedule.building("14:00"), is(excepted));
+    }
+
+    @Test
     public void test_10_schedule() {
         BirdSchedule birdSchedule = new BirdSchedule();
         String excepted = "It's 10:00, I'm WildGoose, I'm flying\n" +
@@ -52,5 +58,13 @@ public class BirdScheduleTest {
         String excepted = "It's 11:00, I'm WildGoose, I'm swimming\n" +
                 "It's 11:00, I'm Penguin, I'm swimming\n";
         assertThat(birdSchedule.swimming("11:00"), is(excepted));
+    }
+
+    @Test
+    public void test_13_schedule() {
+        BirdSchedule birdSchedule = new BirdSchedule();
+        String excepted = "It's 13:00, I'm WildGoose, I'm programming\n" +
+                "It's 13:00, I'm Swallow, I'm programming\n";
+        assertThat(birdSchedule.programming("13:00"), is(excepted));
     }
 }

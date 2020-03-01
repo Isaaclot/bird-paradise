@@ -1,7 +1,7 @@
 package task3;
 
 /**
- * @author liangqian0723@gmail.com
+ * @author
  * @since 2020/3/1 11:59 AM
  */
 public class Swimmer extends Bird implements ISwim {
@@ -11,6 +11,6 @@ public class Swimmer extends Bird implements ISwim {
 
     @Override
     public String swimming(String clock) {
-        return reportStatus("swimming", clock);
+        return reportStatus(clock, "swimming");
     }
 }

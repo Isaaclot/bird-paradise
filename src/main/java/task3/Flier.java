@@ -1,7 +1,7 @@
 package task3;
 
 /**
- * @author liangqian0723@gmail.com
+ * @author
  * @since 2020/3/1 3:24 PM
  */
 public class Flier extends Bird implements IFly {
@@ -11,6 +11,6 @@ public class Flier extends Bird implements IFly {
 
     @Override
     public String flying(String clock) {
-        return reportStatus("flying", clock);
+        return reportStatus(clock, "flying");
     }
 }

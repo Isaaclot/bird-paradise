@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author liangqian0723@gmail.com
+ * @author
  * @since 2020/3/1 10:23 AM
  */
 public class BirdSchedule {

@@ -1,7 +1,7 @@
 package task2;
 
 /**
- * @author liangqian0723@gmail.com
+ * @author
  * @since 2020/3/1 9:51 AM
  */
 public class WildGoose extends Bird {

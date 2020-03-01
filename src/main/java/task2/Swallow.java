@@ -1,7 +1,7 @@
 package task2;
 
 /**
- * @author liangqian0723@gmail.com
+ * @author
  * @since 2020/3/1 10:11 AM
  */
 public class Swallow extends Bird {
